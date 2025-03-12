@@ -7,7 +7,6 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
-import { SiLeetcode } from "react-icons/si";
 
 function HeroSection() {
   return (
@@ -54,13 +53,6 @@ function HeroSection() {
               <FaFacebook size={30} />
             </Link>
             <Link
-              href={personalData.leetcode}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <SiLeetcode size={30} />
-            </Link>
-            <Link
               href={personalData.twitter}
               target='_blank'
               className="transition-all text-pink-500 hover:scale-125 duration-300"
@@ -100,80 +92,146 @@ function HeroSection() {
           <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <div className="blink">
-                <span className="mr-2 text-pink-500">const</span>
-                <span className="mr-2 text-white">coder</span>
-                <span className="mr-2 text-pink-500">=</span>
+                <span className="mr-2 text-pink-500">import java.util.List;<br /></span>
+                <span className="mr-2 text-pink-500">import java.util.Arrays<br /></span>
+                <span className="mr-2 text-white">public class Coder</span>
                 <span className="text-gray-400">{'{'}</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">name:</span>
-                <span className="text-gray-400">{`'`}</span>
-                <span className="text-amber-300">Abu Said</span>
-                <span className="text-gray-400">{`',`}</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">private String</span>
+                <span className="text-amber-300">name;<br /></span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">private List {`<String>`}</span>
+                <span className="text-amber-300">skills;<br /></span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">private boolean</span>
+                <span className="text-amber-300">hardWorker;<br /></span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">private boolean</span>
+                <span className="text-amber-300">quickLearner;<br /></span>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">private boolean</span>
+                <span className="text-amber-300">problemSolver;<br /></span>
+                <div>
+                  <br />
+                  <span className>public Coder</span>
+                  <span className="text-gray-400">{` (`}</span>
+                  <span className="ml-8 lg:ml-16 text-white">String name,</span>
+                  <span className="text-amber-300">List {`<String>`} skills,</span>
+                  <span className="text-amber-300">boolean hardWorker,</span>
+                  <span className="text-amber-300">boolean quickLearner,</span>
+                  <span className="text-amber-300">boolean problemSolver</span>
+                  <span className="text-gray-400">{`) {`} <br /></span>
+                  <br />
+                  <span className="ml-4 lg:ml-24  text-cyan-400">this.</span>
+                  <span className="text-amber-300">name </span>
+                  <span className="text-white"> = </span>
+                  <span className="text-orange-400">name;</span>
+                  <br />
+                  <span className="ml-4 lg:ml-24 text-cyan-400">this.</span>
+                  <span className="text-amber-300">skills </span>
+                  <span className="text-white"> = </span>
+                  <span className="text-orange-400"> skills;</span>
+                  <br />
+                  <span className="ml-4 lg:ml-24 text-cyan-400">this.</span>
+                  <span className="text-amber-300">hardWorker</span>
+                  <span className="text-white"> = </span>
+                  <span className="text-orange-400"> hardWorker;</span>
+                  <br />
+                  <span className="ml-4 lg:ml-24 text-cyan-400">this.</span> 
+                  <span className="text-amber-300">quickLearner</span>
+                  <span className="text-white"> = </span>
+                  <span className="text-orange-400"> quickLearner;</span>
+                  <br />
+                  <span className="ml-4 lg:ml-24 text-cyan-400">this.</span>
+                  <span className="text-amber-300">problemSolver</span>
+                  <span className="text-white"> = </span>
+                  <span className="text-orange-400"> problemSolver;</span>
+                  <br />
+                  <span className="text-gray-400">{`}`}</span>
+                </div>
+                <div>
+                  <br />
+                  <span className="ml-4 lg:ml-8 mr-2 text-white">public boolean</span>
+                  <span className="text-amber-300">hireable()</span>
+                  <span className="text-gray-400">{` {`}</span>
+                  <br />
+                  <span className="ml-8 lg:ml-16 text-orange-400">return</span>
+                  <span className="text-white-400">  hardWorker </span>
+                  <span className="text-cyan-400"> && </span>
+                  <span className="text-white-400">  problemSolver </span>
+                  <span className="text-cyan-400"> && </span>
+                  <span className="text-white-400"> skills.size()</span>
+                  <span className="text-amber-300">  {`>=`}</span>
+                  <span className="text-orange-400">5</span>
+                  <span className="text-gray-400">{`;`}</span>
+                  <br />
+                  <span className="text-gray-400">{` }`}</span>
+                </div>
+
+                <div>
+                  <span>public static void </span>
+                  <span className="text-amber-300">main</span>
+                  <span className="text-gray-400">{`(`}</span>
+                  <span className="text-white">String[] args</span>
+                  <span className="text-gray-400">{`) {`}</span>
+                  <br />
+                  <span className="ml-8 text-white-400">List </span>
+                  <span>{`<Strings>`}</span>
+                  <span className="text-amber-300">skills</span>
+                  <span className="text-gray-400"> = </span>
+                  <span className="text-amber-300">Arrays.asList</span>
+                  <span className="text-gray-400">{`(`}</span>
+                  <span className="text-orange-400">"Java"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"Python"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="ml-8 text-orange-400">"JavaScript"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"React"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"NodeJS"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"MySql"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"MongoDB"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="ml-8 text-orange-400">"PostgreSQL"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"SpringBoot"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"Docker"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"Flask"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"Django"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="ml-8 text-orange-400">"Solidity"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"Move"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">"AWS"</span>
+                  <span className="text-gray-400">{`);`}</span>
+                  <br />
+                  <span className="ml-8 text-white-400">Coder </span>
+                  <span className="text-amber-300">coder</span>
+                  <span className="text-gray-400"> = </span>
+                  <span className="text-white-400">new </span>
+                  <span className="text-amber-300">Coder</span>
+                  <span className="text-gray-400">{`(`}</span>
+                  <span className="text-orange-400">"Oluwafemi Jacob"</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">skills</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">true</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="ml-8 text-orange-400">true</span>
+                  <span className="text-gray-400">{`, `}</span>
+                  <span className="text-orange-400">true</span>
+                  <span className="text-gray-400">{`);`}</span>
+                  <br />
+                  <span className="ml-8 text-white-400">System.out.println</span>
+                  <span className="text-gray-400">{`(`}</span>
+                  <span className="text-orange-400">coder.hireable()</span>
+                  <span className="text-gray-400">{`);`}</span>
+                </div>
               </div>
-              <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">skills:</span>
-                <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">React</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NextJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Redux</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NestJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MySql</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Docker</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AWS</span>
-                <span className="text-gray-400">{"'],"}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">quickLearner:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
-                <span className="text-orange-400">true</span>
-                <span className="text-gray-400">,</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
-                <span className="text-orange-400">function</span>
-                <span className="text-gray-400">{'() {'}</span>
-              </div>
-              <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-orange-400">return</span>
-                <span className="text-gray-400">{`(`}</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">hardWorker</span>
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">problemSolver</span>
-                <span className="text-amber-300">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-white">skills.length</span>
-                <span className="mr-2 text-amber-300">&gt;=</span>
-                <span className="text-orange-400">5</span>
-              </div>
-              <div><span className="ml-8 lg:ml-16 mr-2 text-gray-400">{`);`}</span></div>
               <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
               <div><span className="text-gray-400">{`};`}</span></div>
             </code>
@@ -185,3 +243,4 @@ function HeroSection() {
 };
 
 export default HeroSection;
+

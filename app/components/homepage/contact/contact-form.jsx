@@ -1,5 +1,4 @@
 "use client";
-// @flow strict
 import { isValidEmail } from "@/utils/check-email";
 import axios from "axios";
 import { useState } from "react";
@@ -21,9 +20,43 @@ function ContactForm() {
     }
   };
 
+  // const handleSendMail = async (e) => {
+  //   e.preventDefault();
+
+  //   if (!userInput.email || !userInput.message || !userInput.name) {
+  //     setError({ ...error, required: true });
+  //     return;
+  //   } else if (error.email) {
+  //     return;
+  //   } else {
+  //     setError({ ...error, required: false });
+  //   };
+
+  //   try {
+  //     setIsLoading(true);
+  //     const res = await axios.post(
+  //       `${process.env.NEXT_PUBLIC_APP_URL}/api/contact/route`,
+  //       userInput
+  //     );
+  //     // const res = await axios.post('/api/contact/route', userInput);
+
+  //     toast.success("Message sent successfully!");
+  //     setUserInput({
+  //       name: "",
+  //       email: "",
+  //       message: "",
+  //     });
+  //   } catch (error) {
+  //     toast.error(error?.response?.data?.message);
+  //   } finally {
+  //     setIsLoading(false);
+  //   };
+  // };
+
+
   const handleSendMail = async (e) => {
     e.preventDefault();
-
+  
     if (!userInput.email || !userInput.message || !userInput.name) {
       setError({ ...error, required: true });
       return;
@@ -31,15 +64,15 @@ function ContactForm() {
       return;
     } else {
       setError({ ...error, required: false });
-    };
-
+    }
+  
     try {
       setIsLoading(true);
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
-        userInput
-      );
-
+      // const res = await axios.post(
+      //   `${process.env.NEXT_PUBLIC_APP_URL}app/api/contact/route.js`,
+      //   userInput
+      // );
+      const res = await axios.post('/api/contact/route.js', userInput);
       toast.success("Message sent successfully!");
       setUserInput({
         name: "",
@@ -47,12 +80,12 @@ function ContactForm() {
         message: "",
       });
     } catch (error) {
-      toast.error(error?.response?.data?.message);
+      toast.error(error?.response?.data?.message || "Something went wrong!");
     } finally {
       setIsLoading(false);
-    };
+    }
   };
-
+  
   return (
     <div>
       <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">Contact with me</p>
@@ -104,7 +137,7 @@ function ContactForm() {
           </div>
           <div className="flex flex-col items-center gap-3">
             {error.required && <p className="text-sm text-red-400">
-              All fiels are required!
+              All fields are required!
             </p>}
             <button
               className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
