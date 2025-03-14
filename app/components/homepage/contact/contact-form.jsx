@@ -72,7 +72,7 @@ function ContactForm() {
       //   `${process.env.NEXT_PUBLIC_APP_URL}app/api/contact/route.js`,
       //   userInput
       // );
-      const res = await axios.post('/api/contact/route.js', userInput);
+      const res = await axios.post('/api/contact', userInput);
       toast.success("Message sent successfully!");
       setUserInput({
         name: "",
