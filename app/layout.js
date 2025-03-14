@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Portfolio of Oluwafemi Jacob - Software Engineer",
   description:
-    "This is the portfolio of Oluwafemi Victor Jacob. I am a full stack engineer and a self taught engineer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
+    "This is the portfolio of Oluwafemi Victor Jacob. I am a full stack engineer. I love to learn new things and I am always open to collaborating with others. I am a quick learner and I am always looking for new challenges.",
 };
 
 export default function RootLayout({ children }) {
