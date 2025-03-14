@@ -90,7 +90,7 @@ function HeroSection() {
             </div>
           </div>
           <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
-            <code className="font-mono text-xs md:text-sm lg:text-base">
+            {/* <code className="font-mono text-xs md:text-sm lg:text-base">
               <div className="blink">
                 <span className="mr-2 text-pink-500 block">import java.util.List;</span>
                 <span className="mr-2 text-pink-500 block">import java.util.Arrays;</span>
@@ -120,7 +120,7 @@ function HeroSection() {
                 </div>   
             
                 <div>
-                  <br />
+                  <span className="block"> </span>
                   <span className>public Coder</span>
                   <span className="text-gray-400">{` (`}</span>
                   <span className="ml-8 lg:ml-16 text-white">String name,</span>
@@ -245,8 +245,191 @@ function HeroSection() {
               </div>
               <div><span className="ml-4 lg:ml-8 text-gray-400">{`};`}</span></div>
               <div><span className="text-gray-400">{`};`}</span></div>
-            </code>
-            
+            </code> */}
+            <code className="font-mono text-xs md:text-sm lg:text-base">
+  <div className="blink">
+    <div>
+      <span className="mr-2 text-pink-500">import java.util.List;</span>
+      <br />
+      <span className="mr-2 text-pink-500">import java.util.Arrays;</span>
+      <br />
+    </div>
+    <div>
+      <span className="mr-2 text-white">public class Coder</span>
+      <span className="text-gray-400">{'{'}</span>
+    </div>
+  </div>
+
+  <div className="ml-4 lg:ml-8">
+    {/* Field declarations */}
+    <div>
+      <span className="text-white">private String</span>
+      <span className="text-amber-300"> name;</span>
+      <br />
+    </div>
+    <div>
+      <span className="text-white">private List&lt;String&gt;</span>
+      <span className="text-amber-300"> skills;</span>
+      <br />
+    </div>
+    <div>
+      <span className="text-white">private boolean</span>
+      <span className="text-amber-300"> hardWorker;</span>
+      <br />
+    </div>
+    <div>
+      <span className="text-white">private boolean</span>
+      <span className="text-amber-300"> quickLearner;</span>
+      <br />
+    </div>
+    <div>
+      <span className="text-white">private boolean</span>
+      <span className="text-amber-300"> problemSolver;</span>
+      <br />
+    </div>
+
+    {/* Constructor */}
+    <div className="mt-4">
+      <span className="text-white">public Coder</span>
+      <span className="text-gray-400">(</span>
+      <span className="ml-4 text-white">String name,</span>
+      <br />
+      <span className="ml-8 text-white">List&lt;String&gt; skills,</span>
+      <br />
+      <span className="ml-8 text-white">boolean hardWorker,</span>
+      <br />
+      <span className="ml-8 text-white">boolean quickLearner,</span>
+      <br />
+      <span className="ml-8 text-white">boolean problemSolver</span>
+      <span className="text-gray-400">)</span>
+      <span className="text-gray-400">{' {'}</span>
+      <br />
+      <div className="ml-8">
+        <span className="text-cyan-400">this.</span>
+        <span className="text-amber-300">name</span>
+        <span className="text-white"> = </span>
+        <span className="text-orange-400">name;</span>
+        <br />
+        <span className="text-cyan-400">this.</span>
+        <span className="text-amber-300">skills</span>
+        <span className="text-white"> = </span>
+        <span className="text-orange-400">skills;</span>
+        <br />
+        <span className="text-cyan-400">this.</span>
+        <span className="text-amber-300">hardWorker</span>
+        <span className="text-white"> = </span>
+        <span className="text-orange-400">hardWorker;</span>
+        <br />
+        <span className="text-cyan-400">this.</span>
+        <span className="text-amber-300">quickLearner</span>
+        <span className="text-white"> = </span>
+        <span className="text-orange-400">quickLearner;</span>
+        <br />
+        <span className="text-cyan-400">this.</span>
+        <span className="text-amber-300">problemSolver</span>
+        <span className="text-white"> = </span>
+        <span className="text-orange-400">problemSolver;</span>
+        <br />
+      </div>
+      <span className="text-gray-400">{'}'}</span>
+      <br />
+    </div>
+
+    {/* hireable() method */}
+    <div className="mt-4">
+      <span className="text-white">public boolean</span>
+      <span className="text-amber-300"> hireable()</span>
+      <span className="text-gray-400">{' {'}</span>
+      <br />
+      <div className="ml-8">
+        <span className="text-orange-400">return</span>
+        <span className="text-white"> hardWorker</span>
+        <span className="text-cyan-400"> &amp;&amp;</span>
+        <span className="text-white"> problemSolver</span>
+        <span className="text-cyan-400"> &amp;&amp;</span>
+        <span className="text-white"> skills.size() &gt;= 5;</span>
+      </div>
+      <span className="text-gray-400">{'}'}</span>
+      <br />
+    </div>
+
+    {/* main() method */}
+    <div className="mt-4">
+      <span className="text-white">public static void</span>
+      <span className="text-amber-300"> main</span>
+      <span className="text-gray-400">(String[] args)</span>
+      <span className="text-gray-400">{' {'}</span>
+      <br />
+      <div className="ml-8">
+        <span className="text-white">List&lt;String&gt;</span>
+        <span className="text-amber-300"> skills</span>
+        <span className="text-white"> = Arrays.asList(</span>
+        <div className="ml-8">
+          <span className="text-orange-400">&quot;Java&quot;</span>
+          <span className="text-white">, </span>
+          <span className="text-orange-400">&quot;Python&quot;</span>
+          <span className="text-white">, </span>
+          <br />
+          <span className="text-orange-400">&quot;JavaScript&quot;</span>
+          <span className="text-white">, </span>
+          <span className="text-orange-400">&quot;React&quot;</span>
+          <span className="text-white">, </span>
+          <br />
+          <span className="text-orange-400">&quot;NodeJS&quot;</span>
+          <span className="text-white">, </span>
+          <span className="text-orange-400">&quot;MySql&quot;</span>
+          <span className="text-white">, </span>
+          <br />
+          <span className="text-orange-400">&quot;MongoDB&quot;</span>
+          <span className="text-white">, </span>
+          <span className="text-orange-400">&quot;PostgreSQL&quot;</span>
+          <span className="text-white">, </span>
+          <br />
+          <span className="text-orange-400">&quot;SpringBoot&quot;</span>
+          <span className="text-white">, </span>
+          <span className="text-orange-400">&quot;Docker&quot;</span>
+          <span className="text-white">, </span>
+          <br />
+          <span className="text-orange-400">&quot;Flask&quot;</span>
+          <span className="text-white">, </span>
+          <span className="text-orange-400">&quot;Django&quot;</span>
+          <span className="text-white">, </span>
+          <br />
+          <span className="text-orange-400">&quot;Solidity&quot;</span>
+          <span className="text-white">, </span>
+          <span className="text-orange-400">&quot;Move&quot;</span>
+          <span className="text-white">, </span>
+          <br />
+          <span className="text-orange-400">&quot;AWS&quot;</span>
+        </div>
+        <span className="text-white">);</span>
+        <br />
+      </div>
+      
+      <div className="ml-8 mt-4">
+        <span className="text-white">Coder</span>
+        <span className="text-amber-300"> coder</span>
+        <span className="text-white"> = new Coder(</span>
+        <br />
+        <span className="ml-8 text-orange-400">&quot;Oluwafemi Jacob&quot;</span>
+        <span className="text-white">, </span>
+        <span className="text-amber-300">skills</span>
+        <span className="text-white">, true, true, true</span>
+        <span className="text-white">);</span>
+        <br />
+      </div>
+
+      <div className="ml-8 mt-4">
+        <span className="text-white">System.out.println(</span>
+        <span className="text-amber-300">coder.hireable()</span>
+        <span className="text-white">);</span>
+      </div>
+      <span className="text-gray-400">{'}'}</span>
+    </div>
+  </div>
+
+  <div className="text-gray-400">{'}'}</div>
+</code>
           </div>
         </div>
       </div>
